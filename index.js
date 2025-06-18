@@ -21,9 +21,7 @@ app.use(cors());
 app.use('/api', user);
 // connect to the mongodb
 mongoose
-  .connect(
-    'mongodb+srv://karkioceann:Password123Access@cluster0.qha4b.mongodb.net/test'
-  )
+  .connect(connectionString)
   .then(() => console.log('MongoDb connected successfully'))
   .catch((err) => console.error(err));
 
